@@ -6,7 +6,7 @@ import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../services/product.service';
 import { Product } from '../models/product.model';
-import { environment } from '../../environments/environment';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-catalogue',
@@ -17,6 +17,7 @@ import { environment } from '../../environments/environment';
     MatTooltipModule,
     MatIconModule,
     FormsModule,
+    RouterLink,
   ],
   templateUrl: './catalogue.component.html',
   styleUrl: './catalogue.component.css',
@@ -44,8 +45,7 @@ export class CatalogueComponent implements OnInit {
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    const isDev = !environment.production;
-    this.productService.loadProducts(isDev).subscribe((data) => {
+    this.productService.loadProducts().subscribe((data) => {
       this.products = data;
     });
   }

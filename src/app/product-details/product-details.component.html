@@ -1,0 +1,75 @@
+<div class="bg-white font-sans" *ngIf="productDetails">
+  <main class="flex flex-col gap-1 mt-28 pb-20 px-40">
+    <button
+      (click)="goBack()"
+      class="text-black text-[1rem] font-medium py-1 mb-2 w-20 bg-gray-200 hover:text-gray-700 cursor-pointer rounded-lg"
+    >
+      <i class="fas fa-angle-left"></i>
+      Back
+    </button>
+    <div class="flex border-blue-600 border-2 bg-blue-200 rounded-xl">
+      <div class="">
+        <img
+          [src]="productDetails.image"
+          [alt]="productDetails.name"
+          class="object-cover w-80 h-90 rounded-l-xl"
+        />
+      </div>
+
+      <div class="text-gray-700 flex flex-col px-4 py-4">
+        <h3 class="font-bold md:text-[1.5rem] text-[1.2rem] text-gray-800">
+          {{ productDetails.name }}
+        </h3>
+        <p class="md:text-[1rem] text-[0.8rem]">
+          {{ productDetails.fullDescription }}
+        </p>
+        <p
+          class="font-medium text-gray-950 md:text-[1.3rem] text-[1.1rem] pt-2"
+        >
+          ₦{{ productDetails.price }}
+        </p>
+        <p class="text-md">
+          <span class="font-medium">Brand:</span> {{ productDetails.brandName }}
+        </p>
+        <span class="mt-auto">
+          <div class="rating flex gap-1">
+            <p class="font-medium md:text-[1rem] text-[0.9rem] mr-1">Rating:</p>
+            <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+              <mat-icon
+                color="warn"
+                (click)="updateRating(productDetails, i + 1)"
+                class="cursor-pointer"
+              >
+                {{ i < productDetails.rating ? "star" : "star_border" }}
+              </mat-icon>
+            </ng-container>
+          </div>
+
+          <div class="mt-2 flex gap-2">
+            <button
+              *ngIf="buttonVisible"
+              mat-flat-button
+              class="custom-button"
+              (click)="openItemSelector()"
+            >
+              <p *ngIf="!loading">Add to Cart</p>
+              <i
+                *ngIf="loading"
+                class="fas fa-circle-notch fa-spin text-xl text-white"
+              ></i>
+            </button>
+            <span *ngIf="itemSelector" class="flex gap-3 items-center">
+              <button mat-mini-fab color="warn" class="add-btn">
+                <mat-icon>add</mat-icon>
+              </button>
+              <p class="cart-no font-medium font-mono text-lg">1</p>
+              <button mat-mini-fab color="warn" class="add-btn">
+                <mat-icon>remove</mat-icon>
+              </button>
+            </span>
+          </div>
+        </span>
+      </div>
+    </div>
+  </main>
+</div>

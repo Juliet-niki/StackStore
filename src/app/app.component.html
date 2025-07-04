@@ -1,3 +1,25 @@
-<app-catalogue></app-catalogue>
+<div class="relative">
+  <nav
+    class="fixed top-0 right-0 left-0 h-20 px-8 items-center flex justify-between z-100 bg-blue-200 shadow-md"
+  >
+    <div class="flex items-end">
+      <img src="assets/image/logo2.png" alt="" class="w-15 object-cover" />
+
+      <p class="font-bold text-2xl text-blue-800">StackStore</p>
+    </div>
+
+    <div
+      class="relative flex gap-2 items-end text-gray-800 hover:text-blue-800 cursor-pointer"
+    >
+      <i class="fas fa-cart-plus text-3xl"></i>
+      <p
+        class="absolute -top-3 left-7 bg-blue-800 h-5 w-fit px-1 py-1 flex justify-center items-center text-[0.8rem] text-white rounded-full"
+      >
+        0
+      </p>
+      <p class="font-medium text-lg">Cart</p>
+    </div>
+  </nav>
+</div>
 
 <router-outlet />

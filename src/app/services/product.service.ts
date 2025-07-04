@@ -12,10 +12,10 @@ export class ProductService {
 
   constructor(private http: HttpClient) {}
 
-  loadProducts(forceReload: boolean = false): Observable<Product[]> {
+  loadProducts(): Observable<Product[]> {
     const stored = localStorage.getItem(this.localStorageKey);
 
-    if (stored && !forceReload) {
+    if (stored) {
       return of(JSON.parse(stored));
     } else {
       return this.http

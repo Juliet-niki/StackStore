@@ -8,3 +8,36 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.custom-button {
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  border-radius: 9px !important ;
+  background-color: #103fe9 !important;
+}
+
+.add-btn {
+  border-radius: 9px !important;
+  width: 37px !important;
+  height: 37px !important;
+  background-color: #103fe9 !important;
+}
+
+.rating {
+  display: flex;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 0.9rem;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+/* Medium screens (≥768px) */
+@media (min-width: 768px) {
+  .star {
+    font-size: 0.9rem;
+  }
+}
