@@ -2,10 +2,11 @@
   <nav
     class="fixed top-0 right-0 left-0 h-20 px-8 items-center flex justify-between z-100 bg-blue-200 shadow-md"
   >
-    <span class="flex items-center gap-1">
-      <i class="fas fa-store text-2xl text-blue-900"></i>
+    <div class="flex items-end">
+      <img src="assets/image/logo2.png" alt="" class="w-15 object-cover" />
+
       <p class="font-bold text-2xl text-blue-800">StackStore</p>
-    </span>
+    </div>
 
     <div
       class="relative flex gap-2 items-end text-gray-800 hover:text-blue-800 cursor-pointer"
@@ -19,6 +20,7 @@
       <p class="font-medium text-lg">Cart</p>
     </div>
   </nav>
+
   <main class="flex gap-8 mt-28 px-3 flex-wrap justify-center">
     <div
       *ngFor="let product of products"
@@ -57,13 +59,7 @@
         </div>
 
         <div class="ml-auto mt-2 pb-2">
-          <a
-            mat-flat-button
-            routerLink="."
-            class="custom-button bg-blue-600 text-white px-4 py-2 rounded"
-          >
-            Add to Cart
-          </a>
+          <button mat-flat-button class="custom-button">Add to Cart</button>
         </div>
       </div>
     </div>

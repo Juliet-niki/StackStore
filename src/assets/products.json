@@ -12,8 +12,8 @@
   {
     "id": 2,
     "image": "assets/image/sc2.jpg",
-    "slug": "GlamCare",
-    "name": "GlamCare",
+    "slug": "Ravion",
+    "name": "Ravion",
     "price": 13000,
     "description": "Best Sunscreen SPF for unlimited protection.",
     "rating": 1
@@ -21,8 +21,8 @@
   {
     "id": 3,
     "image": "assets/image/sc3.jpg",
-    "slug": "GlamCare",
-    "name": "GlamCare",
+    "slug": "Olay",
+    "name": "Olay",
     "price": 7000,
     "description": "Best Sunscreen SPF for unlimited protection.",
     "rating": 2
@@ -30,17 +30,17 @@
   {
     "id": 4,
     "image": "assets/image/sc4.jpg",
-    "slug": "GlamCare",
-    "name": "GlamCare",
+    "slug": "Clear",
+    "name": "Clear",
     "price": 8600,
     "description": "Best Sunscreen SPF for unlimited protection.",
     "rating": 0
   },
   {
     "id": 5,
-    "image": "assets/image/sc8.jpg",
-    "slug": "GlamCare",
-    "name": "GlamCare",
+    "image": "assets/image/sc5.jpg",
+    "slug": "Tru Skin",
+    "name": "Tru Skin",
     "price": 7000,
     "description": "Best Sunscreen SPF for unlimited protection.",
     "rating": 0
@@ -48,8 +48,8 @@
   {
     "id": 6,
     "image": "assets/image/sc3.jpg",
-    "slug": "GlamCare",
-    "name": "GlamCare",
+    "slug": "Facial Brush",
+    "name": "Facial Brush",
     "price": 13000,
     "description": "Best Sunscreen SPF for unlimited protection.",
     "rating": 0
@@ -57,8 +57,8 @@
   {
     "id": 7,
     "image": "assets/image/sc7.jpg",
-    "slug": "GlamCare",
-    "name": "GlamCare",
+    "slug": "Pilgrim",
+    "name": "Pilgrim",
     "price": 7000,
     "description": "Best Sunscreen SPF for unlimited protection.",
     "rating": 0
@@ -66,8 +66,8 @@
   {
     "id": 8,
     "image": "assets/image/sc8.jpg",
-    "slug": "GlamCare",
-    "name": "GlamCare",
+    "slug": "Haitian Oil",
+    "name": "Haitian Oil",
     "price": 8600,
     "description": "Best Sunscreen SPF for unlimited protection.",
     "rating": 0
