@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "image": "assets/image/sc1.jpg",
+    "slug": "GlamCare",
+    "name": "GlamCare",
+    "price": 7000,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "rating": 2,
+    "buttonLabel": "Add to Cart "
+  },
+  {
+    "id": 2,
+    "image": "assets/image/sc2.jpg",
+    "slug": "GlamCare",
+    "name": "GlamCare",
+    "price": 13000,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "rating": 1
+  },
+  {
+    "id": 3,
+    "image": "assets/image/sc3.jpg",
+    "slug": "GlamCare",
+    "name": "GlamCare",
+    "price": 7000,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "rating": 2
+  },
+  {
+    "id": 4,
+    "image": "assets/image/sc4.jpg",
+    "slug": "GlamCare",
+    "name": "GlamCare",
+    "price": 8600,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "rating": 0
+  },
+  {
+    "id": 5,
+    "image": "assets/image/sc8.jpg",
+    "slug": "GlamCare",
+    "name": "GlamCare",
+    "price": 7000,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "rating": 0
+  },
+  {
+    "id": 6,
+    "image": "assets/image/sc3.jpg",
+    "slug": "GlamCare",
+    "name": "GlamCare",
+    "price": 13000,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "rating": 0
+  },
+  {
+    "id": 7,
+    "image": "assets/image/sc7.jpg",
+    "slug": "GlamCare",
+    "name": "GlamCare",
+    "price": 7000,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "rating": 0
+  },
+  {
+    "id": 8,
+    "image": "assets/image/sc8.jpg",
+    "slug": "GlamCare",
+    "name": "GlamCare",
+    "price": 8600,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "rating": 0
+  }
+]

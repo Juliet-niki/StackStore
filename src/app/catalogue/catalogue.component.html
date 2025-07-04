@@ -1,6 +1,6 @@
 <div class="bg-white relative font-sans">
   <nav
-    class="fixed top-0 right-0 left-0 h-20 px-8 items-center flex justify-between z-100 bg-blue-100 shadow-md"
+    class="fixed top-0 right-0 left-0 h-20 px-8 items-center flex justify-between z-100 bg-blue-200 shadow-md"
   >
     <span class="flex items-center gap-1">
       <i class="fas fa-store text-2xl text-blue-900"></i>
@@ -19,38 +19,51 @@
       <p class="font-medium text-lg">Cart</p>
     </div>
   </nav>
-  <main class="w-[90vw] flex justify-center mt-20">
-    <div class="mt-8 shadow-2xl w-[25vw] border-2 border-blue-800 rounded-2xl">
-      <div class="w-[25vw] flex justify-center">
-        <img src="assets/image/sc1.jpg" alt="Ceramide Cream" class="h-70" />
+  <main class="flex gap-8 mt-28 px-3 flex-wrap justify-center">
+    <div
+      *ngFor="let product of products"
+      class="shadow-lg shadow-gray-400 w-70 border-2 border-blue-800 rounded-2xl"
+    >
+      <div class="w-full flex justify-center">
+        <img
+          [src]="product?.image"
+          alt="{{ product.name }}"
+          class="object-cover h-50 rounded-t-2xl"
+        />
       </div>
 
-      <div
-        class="text-gray-800 flex flex-col gap-1 px-2 bg-blue-200 rounded-b-2xl"
-      >
-        <h3 class="font-bold text-[1.2rem]">GlamCare</h3>
-        <p class="font-medium text-[1rem] text-gray-600">₦7000</p>
-        <p class="text-[1rem] text-gray-600">
-          Best Sunscreen SPF for unlimited protection
+      <div class="text-gray-700 flex flex-col px-2 bg-blue-200 rounded-b-2xl">
+        <h3 class="font-bold md:text-[1.2rem] text-[1.1rem] text-gray-800">
+          {{ product?.name }}
+        </h3>
+        <p class="font-medium md:text-[1rem] text-[0.9rem]">
+          ₦{{ product?.price }}
+        </p>
+        <p class="md:text-[1rem] text-[0.9rem]">
+          {{ product?.description }}
         </p>
 
-        <div class="rating mt-1">
-          <p class="font-medium text-md mr-1">Rating:</p>
-          <ng-container *ngFor="let star of stars; let i = index">
+        <div class="rating">
+          <p class="font-medium md:text-[1rem] text-[0.9rem] mr-1">Rating:</p>
+          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
             <mat-icon
-              class="star"
-              [class.filled]="i < rating"
-              (click)="setRating(i + 1)"
+              color="warn"
+              (click)="updateRating(product, i + 1)"
+              class="cursor-pointer"
             >
-              {{ i < rating ? "star" : "star_border" }}
+              {{ i < product.rating ? "star" : "star_border" }}
             </mat-icon>
           </ng-container>
         </div>
 
-        <div class="pb-3 ml-auto">
-          <a mat-flat-button routerLink="." class="custom-button mt-5"
-            >Add to Cart</a
+        <div class="ml-auto mt-2 pb-2">
+          <a
+            mat-flat-button
+            routerLink="."
+            class="custom-button bg-blue-600 text-white px-4 py-2 rounded"
           >
+            Add to Cart
+          </a>
         </div>
       </div>
     </div>

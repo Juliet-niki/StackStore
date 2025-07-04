@@ -3,19 +3,50 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { NgFor } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { ProductService } from '../services/product.service';
+import { Product } from '../models/product.model';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-catalogue',
   standalone: true,
-  imports: [NgFor, MatButtonModule, MatTooltipModule, MatIconModule],
+  imports: [
+    NgFor,
+    MatButtonModule,
+    MatTooltipModule,
+    MatIconModule,
+    FormsModule,
+  ],
   templateUrl: './catalogue.component.html',
   styleUrl: './catalogue.component.css',
 })
-export class CatalogueComponent {
-  rating = 0;
-  stars = new Array(5);
+export class CatalogueComponent implements OnInit {
+  updateRating(product: Product, newRating: number) {
+    product.rating = newRating;
 
-  setRating(value: number) {
-    this.rating = value;
+    const raw = localStorage.getItem('products');
+    if (!raw) return;
+
+    const allProducts: Product[] = JSON.parse(raw);
+
+    const index = allProducts.findIndex((p: Product) => p.id === product.id);
+
+    if (index !== -1) {
+      allProducts[index].rating = newRating;
+      localStorage.setItem('products', JSON.stringify(allProducts));
+    }
+    console.log(allProducts);
+  }
+
+  products: Product[] = [];
+
+  constructor(private productService: ProductService) {}
+
+  ngOnInit(): void {
+    const isDev = !environment.production;
+    this.productService.loadProducts(isDev).subscribe((data) => {
+      this.products = data;
+    });
   }
 }
