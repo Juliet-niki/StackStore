@@ -1,0 +1,26 @@
+.custom-button {
+  font-size: 0.76rem;
+  /* height: 4vh !important; */
+  border-radius: 9px;
+  background-color: #103fe9 !important;
+}
+
+.rating {
+  display: flex;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 20px;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: gold;
+}
+
+.star:not(.filled) {
+  color: #000; /* 🔸 Choose your desired 'border' color */
+}
