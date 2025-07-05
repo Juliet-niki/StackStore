@@ -1,5 +1,7 @@
 <div class="bg-white font-sans" *ngIf="productDetails">
-  <main class="flex flex-col gap-1 mt-28 pb-20 px-40">
+  <main
+    class="flex flex-col gap-1 mt-28 pb-20 lg:px-35 md:px-25 sm:px-18 px-6 lg:bg-white md:bg-amber-500 sm:bg-blue-500"
+  >
     <button
       (click)="goBack()"
       class="text-black text-[1rem] font-medium py-1 mb-2 w-20 bg-gray-200 hover:text-gray-700 cursor-pointer rounded-lg"
@@ -7,12 +9,12 @@
       <i class="fas fa-angle-left"></i>
       Back
     </button>
-    <div class="flex border-blue-600 border-2 bg-blue-200 rounded-xl">
-      <div class="">
+    <div class="sm:flex border-blue-600 border-2 rounded-xl bg-blue-200">
+      <div class="bg-white sm:rounded-l-xl rounded-t-xl mx-auto pt-1">
         <img
           [src]="productDetails.image"
           [alt]="productDetails.name"
-          class="object-cover w-80 h-90 rounded-l-xl"
+          class="object-contain lg:w-80 md:w-95 sm:w-90 w-full lg:h-90 md:h-80 sm:h-70 h-70"
         />
       </div>
 
@@ -31,7 +33,7 @@
         <p class="text-md">
           <span class="font-medium">Brand:</span> {{ productDetails.brandName }}
         </p>
-        <span class="mt-auto">
+        <span class="sm:mt-auto mt-10">
           <div class="rating flex gap-1">
             <p class="font-medium md:text-[1rem] text-[0.9rem] mr-1">Rating:</p>
             <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
@@ -59,12 +61,23 @@
               ></i>
             </button>
             <span *ngIf="itemSelector" class="flex gap-3 items-center">
-              <button mat-mini-fab color="warn" class="add-btn">
-                <mat-icon>add</mat-icon>
-              </button>
-              <p class="cart-no font-medium font-mono text-lg">1</p>
-              <button mat-mini-fab color="warn" class="add-btn">
+              <button
+                (click)="remove()"
+                mat-mini-fab
+                color="warn"
+                class="add-btn"
+              >
                 <mat-icon>remove</mat-icon>
+              </button>
+
+              <p
+                *ngIf="numberOfItemsSelected"
+                class="cart-no font-medium font-mono text-lg"
+              >
+                {{ numberOfItemsSelected }}
+              </p>
+              <button (click)="add()" mat-mini-fab color="warn" class="add-btn">
+                <mat-icon>add</mat-icon>
               </button>
             </span>
           </div>
