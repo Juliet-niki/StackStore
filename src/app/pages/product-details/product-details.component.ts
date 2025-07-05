@@ -4,9 +4,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { NgFor, NgIf, Location } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ProductService } from '../services/product.service';
-import { Product } from '../models/product.model';
+import { ProductService } from '../../services/product.service';
+import { Product } from '../../models/product.model';
 import { ActivatedRoute, RouterLink, Router } from '@angular/router';
+import { NavigationBarComponent } from '../../component/navigation-bar/navigation-bar.component';
 
 @Component({
   selector: 'app-product-details',
@@ -18,6 +19,7 @@ import { ActivatedRoute, RouterLink, Router } from '@angular/router';
     MatIconModule,
     FormsModule,
     NgIf,
+    NavigationBarComponent,
   ],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css',
@@ -40,6 +42,14 @@ export class ProductDetailsComponent implements OnInit {
     console.log(allProducts);
   }
 
+  goBack() {
+    if (window.history.length > 1) {
+      this.location.back();
+    } else {
+      this.router.navigate(['/home']);
+    }
+  }
+
   productDetails: Product | undefined;
 
   constructor(
@@ -54,14 +64,6 @@ export class ProductDetailsComponent implements OnInit {
       this.numberOfItemsSelected = this.productService.getProductQuantity(
         this.productDetails.slug
       );
-    }
-  }
-
-  goBack() {
-    if (window.history.length > 1) {
-      this.location.back();
-    } else {
-      this.router.navigate(['/home']);
     }
   }
 

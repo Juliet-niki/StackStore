@@ -4,8 +4,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ProductService } from '../services/product.service';
-import { Product } from '../models/product.model';
+import { ProductService } from '../../services/product.service';
+import { Product } from '../../models/product.model';
 import { RouterLink } from '@angular/router';
 
 @Component({

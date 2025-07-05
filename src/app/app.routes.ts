@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { CatalogueComponent } from './catalogue/catalogue.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: CatalogueComponent,
+    component: HomeComponent,
   },
   {
     path: 'product/:slug',
