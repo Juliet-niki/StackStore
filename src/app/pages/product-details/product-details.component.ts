@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatButtonModule } from '@angular/material/button';
 import { NgFor, NgIf, Location } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
 import { ActivatedRoute, RouterLink, Router } from '@angular/router';
 import { NavigationBarComponent } from '../../component/navigation-bar/navigation-bar.component';
+import { CatalogueComponent } from '../../component/catalogue/catalogue.component';
+import { CartButtonComponent } from '../../component/cart-button/cart-button.component';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
   imports: [
     NgFor,
-    MatButtonModule,
-    MatTooltipModule,
     MatIconModule,
     FormsModule,
     NgIf,
     NavigationBarComponent,
+    CatalogueComponent,
+    CartButtonComponent,
   ],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css',
@@ -28,10 +28,10 @@ export class ProductDetailsComponent implements OnInit {
   updateRating(product: Product, newRating: number) {
     product.rating = newRating;
 
-    const raw = localStorage.getItem('products');
-    if (!raw) return;
+    const getProducts = localStorage.getItem('products');
+    if (!getProducts) return;
 
-    const allProducts: Product[] = JSON.parse(raw);
+    const allProducts: Product[] = JSON.parse(getProducts);
 
     const index = allProducts.findIndex((p: Product) => p.id === product.id);
 
@@ -39,7 +39,6 @@ export class ProductDetailsComponent implements OnInit {
       allProducts[index].rating = newRating;
       localStorage.setItem('products', JSON.stringify(allProducts));
     }
-    console.log(allProducts);
   }
 
   goBack() {
@@ -60,72 +59,10 @@ export class ProductDetailsComponent implements OnInit {
   ) {
     const slug = this.route.snapshot.paramMap.get('slug');
     this.productDetails = this.productService.getProductBySlug(slug!);
-    if (this.productDetails) {
-      this.numberOfItemsSelected = this.productService.getProductQuantity(
-        this.productDetails.slug
-      );
-    }
-  }
-
-  loading = false;
-  buttonVisible = true;
-  itemSelector = false;
-  numberOfItemsSelected = 0;
-
-  openItemSelector(): void {
-    this.loading = true;
-
-    setTimeout(() => {
-      this.buttonVisible = false;
-      this.itemSelector = true;
-
-      if (this.numberOfItemsSelected === 0) {
-        this.numberOfItemsSelected = 1;
-        this.productService.setProductQuantity(this.productDetails!.slug, 1);
-
-        const currentCartCount = this.productService.getCartCount();
-        this.productService.setCartCount(currentCartCount + 1);
-      }
-    }, 1500);
-  }
-
-  add(): void {
-    this.numberOfItemsSelected++;
-    this.productService.setProductQuantity(
-      this.productDetails!.slug,
-      this.numberOfItemsSelected
-    );
-
-    const newTotal = this.productService.getCartCount() + 1;
-    this.productService.setCartCount(newTotal);
-  }
-  remove(): void {
-    if (this.numberOfItemsSelected > 0) {
-      this.numberOfItemsSelected--;
-      this.productService.setProductQuantity(
-        this.productDetails!.slug,
-        this.numberOfItemsSelected
-      );
-
-      const newTotal = this.productService.getCartCount() - 1;
-      this.productService.setCartCount(newTotal);
-    }
-
-    if (this.numberOfItemsSelected === 0) {
-      this.itemSelector = false;
-      this.buttonVisible = true;
-      this.loading = false;
-    }
   }
 
   ngOnInit(): void {
     const slug = this.route.snapshot.paramMap.get('slug');
     this.productDetails = this.productService.getProductBySlug(slug!);
-
-    if (this.productDetails) {
-      this.numberOfItemsSelected = this.productService.getProductQuantity(
-        this.productDetails.slug
-      );
-    }
   }
 }

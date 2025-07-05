@@ -14,7 +14,9 @@
       />
     </div>
 
-    <div class="text-gray-700 flex flex-col px-2 bg-blue-200 rounded-b-2xl">
+    <div
+      class="text-gray-700 flex flex-col px-2 bg-blue-200 rounded-b-2xl pb-2"
+    >
       <h3 class="font-bold md:text-[1.2rem] text-[1.1rem] text-gray-800">
         {{ product?.name }}
       </h3>
@@ -29,6 +31,7 @@
         <p class="font-medium md:text-[1rem] text-[0.9rem] mr-1">Rating:</p>
         <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
           <mat-icon
+            *ngIf="product.rating !== undefined"
             color="warn"
             (click)="updateRating(product, i + 1)"
             class="cursor-pointer"
@@ -38,40 +41,10 @@
         </ng-container>
       </div>
 
-      <div class="ml-auto mt-2 pb-2">
-        <button
-          *ngIf="buttonVisibleMap[product.slug]"
-          mat-flat-button
-          class="custom-button"
-          (click)="openItemSelector(product.slug)"
-        >
-          <p *ngIf="!loadingMap[product.slug]">Add to Cart</p>
-          <i
-            *ngIf="loadingMap[product.slug]"
-            class="fas fa-circle-notch fa-spin text-xl text-white"
-          ></i>
-        </button>
-
-        <span
-          *ngIf="itemSelectorMap[product.slug]"
-          class="flex gap-3 items-center"
-        >
-          <button (click)="remove(product.slug)" mat-mini-fab class="add-btn">
-            <mat-icon>remove</mat-icon>
-          </button>
-
-          <p
-            *ngIf="numberOfItemsMap[product.slug]"
-            class="cart-no font-medium font-mono text-lg"
-          >
-            {{ numberOfItemsMap[product.slug] }}
-          </p>
-
-          <button (click)="add(product.slug)" mat-mini-fab class="add-btn">
-            <mat-icon>add</mat-icon>
-          </button>
-        </span>
-      </div>
+      <app-cart-button
+        [productItem]="product"
+        class="ml-auto"
+      ></app-cart-button>
     </div>
   </div>
 </main>

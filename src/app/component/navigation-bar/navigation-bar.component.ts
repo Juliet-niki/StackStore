@@ -9,13 +9,13 @@ import { ProductService } from '../../services/product.service';
   styleUrl: './navigation-bar.component.css',
 })
 export class NavigationBarComponent {
-  cartCount = 0;
+  totalCartItem = 0;
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.productService.cartCount$.subscribe((count) => {
-      this.cartCount = count;
+    this.productService.totalCartItem$.subscribe((count) => {
+      this.totalCartItem = count;
     });
   }
 }

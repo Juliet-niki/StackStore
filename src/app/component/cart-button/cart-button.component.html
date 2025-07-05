@@ -1,0 +1,29 @@
+<div class="mt-2 flex gap-2">
+  <button
+    *ngIf="displayAddToCartBtn"
+    mat-flat-button
+    class="custom-button"
+    (click)="openDisplayIncrementDecrementBtn()"
+  >
+    <p *ngIf="!displayLoadSpinner">Add to Cart</p>
+    <i
+      *ngIf="displayLoadSpinner"
+      class="fas fa-circle-notch fa-spin text-xl text-white"
+    ></i>
+  </button>
+  <span *ngIf="displayIncrementDecrementBtn" class="flex gap-3 items-center">
+    <button (click)="remove()" mat-mini-fab color="warn" class="add-btn">
+      <mat-icon>remove</mat-icon>
+    </button>
+
+    <p
+      *ngIf="displayNumberOfItemSelected"
+      class="font-medium font-mono text-lg"
+    >
+      {{ displayNumberOfItemSelected }}
+    </p>
+    <button (click)="add()" mat-mini-fab color="warn" class="add-btn">
+      <mat-icon>add</mat-icon>
+    </button>
+  </span>
+</div>

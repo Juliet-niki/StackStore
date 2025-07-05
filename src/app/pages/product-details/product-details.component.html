@@ -1,8 +1,7 @@
 <app-navigation-bar></app-navigation-bar>
+
 <div class="bg-white font-sans" *ngIf="productDetails">
-  <main
-    class="flex flex-col gap-1 mt-28 pb-20 lg:px-35 md:px-25 sm:px-18 px-6 lg:bg-white md:bg-amber-500 sm:bg-blue-500"
-  >
+  <main class="flex flex-col gap-1 mt-28 pb-20 lg:px-35 md:px-25 sm:px-18 px-6">
     <button
       (click)="goBack()"
       class="text-black text-[1rem] font-medium py-1 mb-2 w-20 bg-gray-200 hover:text-gray-700 cursor-pointer rounded-lg"
@@ -39,6 +38,7 @@
             <p class="font-medium md:text-[1rem] text-[0.9rem] mr-1">Rating:</p>
             <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
               <mat-icon
+                *ngIf="productDetails.rating !== undefined"
                 color="warn"
                 (click)="updateRating(productDetails, i + 1)"
                 class="cursor-pointer"
@@ -47,43 +47,11 @@
               </mat-icon>
             </ng-container>
           </div>
-
-          <div class="mt-2 flex gap-2">
-            <button
-              *ngIf="buttonVisible"
-              mat-flat-button
-              class="custom-button"
-              (click)="openItemSelector()"
-            >
-              <p *ngIf="!loading">Add to Cart</p>
-              <i
-                *ngIf="loading"
-                class="fas fa-circle-notch fa-spin text-xl text-white"
-              ></i>
-            </button>
-            <span *ngIf="itemSelector" class="flex gap-3 items-center">
-              <button
-                (click)="remove()"
-                mat-mini-fab
-                color="warn"
-                class="add-btn"
-              >
-                <mat-icon>remove</mat-icon>
-              </button>
-
-              <p
-                *ngIf="numberOfItemsSelected"
-                class="cart-no font-medium font-mono text-lg"
-              >
-                {{ numberOfItemsSelected }}
-              </p>
-              <button (click)="add()" mat-mini-fab color="warn" class="add-btn">
-                <mat-icon>add</mat-icon>
-              </button>
-            </span>
-          </div>
         </span>
+        <app-cart-button [productItem]="productDetails"></app-cart-button>
       </div>
     </div>
   </main>
 </div>
+
+<app-catalogue></app-catalogue>
