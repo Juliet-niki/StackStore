@@ -7,7 +7,7 @@
     "price": 10000,
     "description": "Best Sunscreen SPF for unlimited protection.",
     "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
-    "rating": 2,
+    "rating": 0,
     "brandName": "Nivea"
   },
   {
@@ -18,7 +18,7 @@
     "price": 13000,
     "description": "Best Sunscreen SPF for unlimited protection.",
     "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
-    "rating": 1,
+    "rating": 0,
     "brandName": "Oriflame"
   },
   {
@@ -29,7 +29,7 @@
     "price": 7000,
     "description": "Best Sunscreen SPF for unlimited protection.",
     "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
-    "rating": 2,
+    "rating": 0,
     "brandName": "Dove"
   },
   {

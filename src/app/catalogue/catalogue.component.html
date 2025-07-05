@@ -40,7 +40,48 @@
         </div>
 
         <div class="ml-auto mt-2 pb-2">
-          <button mat-flat-button class="custom-button">Add to Cart</button>
+          <button
+            *ngIf="buttonVisibleMap[product.slug]"
+            mat-flat-button
+            class="custom-button"
+            (click)="openItemSelector(product.slug)"
+          >
+            <p *ngIf="!loadingMap[product.slug]">Add to Cart</p>
+            <i
+              *ngIf="loadingMap[product.slug]"
+              class="fas fa-circle-notch fa-spin text-xl text-white"
+            ></i>
+          </button>
+
+          <span
+            *ngIf="itemSelectorMap[product.slug]"
+            class="flex gap-3 items-center"
+          >
+            <button
+              (click)="remove(product.slug)"
+              mat-mini-fab
+              color="warn"
+              class="add-btn"
+            >
+              <mat-icon>remove</mat-icon>
+            </button>
+
+            <p
+              *ngIf="numberOfItemsMap[product.slug]"
+              class="cart-no font-medium font-mono text-lg"
+            >
+              {{ numberOfItemsMap[product.slug] }}
+            </p>
+
+            <button
+              (click)="add(product.slug)"
+              mat-mini-fab
+              color="warn"
+              class="add-btn"
+            >
+              <mat-icon>add</mat-icon>
+            </button>
+          </span>
         </div>
       </div>
     </div>
