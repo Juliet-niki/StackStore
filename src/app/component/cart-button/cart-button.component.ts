@@ -1,5 +1,11 @@
 import { NgFor, NgIf } from '@angular/common';
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -100,6 +106,14 @@ export class CartButtonComponent implements OnChanges {
       this.displayLoadSpinner = false;
       this.displayAddToCartBtn = true;
       this.displayIncrementDecrementBtn = false;
+      this.displayNumberOfItemSelected = this.productService.getProductQuantity(
+        this.productItem.slug as string
+      );
+    }
+    if (this.displayNumberOfItemSelected > 0) {
+      this.displayLoadSpinner = false;
+      this.displayAddToCartBtn = false;
+      this.displayIncrementDecrementBtn = true;
       this.displayNumberOfItemSelected = this.productService.getProductQuantity(
         this.productItem.slug as string
       );
