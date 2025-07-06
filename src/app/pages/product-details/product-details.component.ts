@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { NgFor, NgIf, Location } from '@angular/common';
+import { NgFor, NgIf, Location, ViewportScroller } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
@@ -45,24 +45,41 @@ export class ProductDetailsComponent implements OnInit {
     if (window.history.length > 1) {
       this.location.back();
     } else {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/']);
     }
   }
 
+  products: Product[] = [];
+  filterProducts: Product[] = [];
   productDetails: Product | undefined;
 
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
     private location: Location,
-    private router: Router
+    private router: Router,
+    private viewportScroller: ViewportScroller
   ) {
     const slug = this.route.snapshot.paramMap.get('slug');
     this.productDetails = this.productService.getProductBySlug(slug!);
   }
 
   ngOnInit(): void {
-    const slug = this.route.snapshot.paramMap.get('slug');
-    this.productDetails = this.productService.getProductBySlug(slug!);
+    this.route.paramMap.subscribe((params) => {
+      const slug = params.get('slug');
+      if (!slug) return;
+
+      this.viewportScroller.scrollToPosition([0, 0]);
+
+      const getallProducts = this.productService.getProducts();
+      const displaySelectedProduct = this.productService.getProductBySlug(slug);
+
+      this.productDetails = displaySelectedProduct;
+      this.products = getallProducts;
+
+      this.filterProducts = getallProducts.filter(
+        (p) => p.slug !== displaySelectedProduct?.slug
+      );
+    });
   }
 }

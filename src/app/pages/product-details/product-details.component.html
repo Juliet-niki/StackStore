@@ -10,7 +10,9 @@
       Back
     </button>
     <div class="sm:flex border-blue-600 border-2 rounded-xl bg-blue-200">
-      <div class="bg-white sm:rounded-l-xl rounded-t-xl mx-auto pt-1">
+      <div
+        class="bg-white sm:rounded-l-xl sm:rounded-t-none rounded-t-xl mx-auto pt-1"
+      >
         <img
           [src]="productDetails.image"
           [alt]="productDetails.name"
@@ -54,4 +56,4 @@
   </main>
 </div>
 
-<app-catalogue></app-catalogue>
+<app-catalogue [products]="filterProducts"></app-catalogue>

@@ -1,5 +1,5 @@
 import { NgFor, NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -20,12 +20,11 @@ import { Product } from '../../models/product.model';
   templateUrl: './cart-button.component.html',
   styleUrl: './cart-button.component.css',
 })
-export class CartButtonComponent {
+export class CartButtonComponent implements OnChanges {
   displayLoadSpinner: boolean = false;
   displayAddToCartBtn: boolean = true;
   displayIncrementDecrementBtn: boolean = false;
   displayNumberOfItemSelected: number = 0;
-  productDetails: Product | undefined;
   @Input() productItem: Product = {
     id: 0,
     slug: '',
@@ -96,6 +95,17 @@ export class CartButtonComponent {
 
   ngOnInit(): void {
     if (this.productItem) {
+      this.displayNumberOfItemSelected = this.productService.getProductQuantity(
+        this.productItem.slug as string
+      );
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['productItem']) {
+      this.displayLoadSpinner = false;
+      this.displayAddToCartBtn = true;
+      this.displayIncrementDecrementBtn = false;
       this.displayNumberOfItemSelected = this.productService.getProductQuantity(
         this.productItem.slug as string
       );

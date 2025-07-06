@@ -1,7 +1,28 @@
 <app-navigation-bar></app-navigation-bar>
 
-<p class="mt-25 mb-5 font-bold font-sans text-3xl text-blue-600 text-center">
-  Wellcome To StackStore
-</p>
+<div class="relative w-full h-[570px] mt-20 font-sans shadow-lg">
+  <img src="assets/image/bg.jpg" class="w-full h-full object-cover" alt="" />
+  <div class="text-white absolute top-30 left-10 w-100">
+    <h3 class="font-bold text-5xl">Glow Naturally.</h3>
+    <h3 class="font-bold text-5xl">Shine Daily.</h3>
+    <p class="font-medium text-lg mt-3">
+      Discover skincare that loves you back. From gentle cleansers to radiant
+      serums, we deliver clean and effective beauty your skin deserves.
+    </p>
+    <a
+      href="#catalogue"
+      class="font-bold text-xl underline underline-offset-2 cursor-pointer hover:text-blue-900"
+      >Shop now</a
+    >
+    and glow with confidence.
+  </div>
+</div>
 
-<app-catalogue></app-catalogue>
+<div id="catalogue" class="pt-25">
+  <p
+    class="bg-blue-300 text-center py-3 mb-10 font-extrabold text-3xl text-gray-800"
+  >
+    Shop now
+  </p>
+  <app-catalogue></app-catalogue>
+</div>

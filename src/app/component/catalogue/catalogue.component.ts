@@ -26,29 +26,31 @@ import { CartButtonComponent } from '../cart-button/cart-button.component';
   styleUrl: './catalogue.component.css',
 })
 export class CatalogueComponent implements OnInit {
-  products: Product[] = [];
+  @Input() products: Product[] = [];
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.productService.loadProducts().subscribe((data) => {
-      this.products = data;
-    });
+    if (this.products.length === 0) {
+      this.productService.loadProducts().subscribe((data) => {
+        this.products = data;
+      });
+    }
   }
 
   updateRating(product: Product, newRating: number) {
     product.rating = newRating;
 
-    const raw = localStorage.getItem('products');
-    if (!raw) return;
+    const getProducts = localStorage.getItem('products');
+    if (!getProducts) return;
 
-    const allProducts: Product[] = JSON.parse(raw);
+    const products: Product[] = JSON.parse(getProducts);
 
-    const index = allProducts.findIndex((p: Product) => p.id === product.id);
+    const index = products.findIndex((p: Product) => p.id === product.id);
 
     if (index !== -1) {
-      allProducts[index].rating = newRating;
-      localStorage.setItem('products', JSON.stringify(allProducts));
+      products[index].rating = newRating;
+      localStorage.setItem('products', JSON.stringify(products));
     }
   }
 }

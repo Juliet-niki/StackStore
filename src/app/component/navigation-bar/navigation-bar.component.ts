@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../../services/product.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navigation-bar',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './navigation-bar.component.html',
   styleUrl: './navigation-bar.component.css',
 })
