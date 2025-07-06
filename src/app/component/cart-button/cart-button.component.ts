@@ -57,8 +57,6 @@ export class CartButtonComponent implements OnChanges {
           this.productItem.slug as string,
           1
         );
-
-        const currentCartCount = this.productService.getCartItems();
         this.productService.setCartItems(this.productItem);
       }
     }, 900);
@@ -70,8 +68,6 @@ export class CartButtonComponent implements OnChanges {
       this.productItem.slug as string,
       this.displayNumberOfItemSelected
     );
-
-    const newTotal = this.productService.getCartItems().length + 1;
     this.productService.setCartItems(this.productItem);
   }
   remove(): void {
@@ -81,8 +77,6 @@ export class CartButtonComponent implements OnChanges {
         this.productItem.slug as string,
         this.displayNumberOfItemSelected
       );
-
-      const newTotal = this.productService.getCartItems().length - 1;
       this.productService.setCartItems(this.productItem);
     }
 

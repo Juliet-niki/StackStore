@@ -1,6 +1,4 @@
-<main
-  class="bg-white font-sans flex gap-8 pb-20 px-3 flex-wrap justify-center"
->
+<main class="bg-white font-sans flex gap-8 pb-20 px-3 flex-wrap justify-center">
   <div
     *ngFor="let product of products"
     class="shadow-lg shadow-gray-400 w-70 border-2 border-blue-800 rounded-2xl"
@@ -29,7 +27,7 @@
         {{ product?.description }}
       </p>
 
-      <div class="rating">
+      <div class="rating flex">
         <p class="font-medium md:text-[1rem] text-[0.9rem] mr-1">Rating:</p>
         <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
           <mat-icon
