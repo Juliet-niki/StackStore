@@ -1,16 +1,16 @@
-<main class="bg-white font-sans flex gap-8 pb-20 px-3 flex-wrap justify-center">
+<main class="font-sans flex gap-8 pb-20 px-10 flex-wrap justify-center">
   <div
     *ngFor="let product of products"
-    class="shadow-lg shadow-gray-400 w-72 border-2 border-blue-800 rounded-2xl"
+    class="shadow-lg shadow-gray-400 border-2 border-blue-800 rounded-2xl"
   >
     <div
       [routerLink]="['/product', product.slug]"
-      class="w-full flex justify-center cursor-pointer"
+      class="w-full flex justify-center bg-white rounded-t-2xl cursor-pointer"
     >
       <img
         [src]="product?.image"
         alt="{{ product.name }}"
-        class="object-cover h-52 rounded-t-2xl"
+        class="object-cover w-48 h-52"
       />
     </div>
 

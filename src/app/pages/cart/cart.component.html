@@ -1,4 +1,4 @@
-<div class="bg-gray-200 min-h-screen flex flex-col justify-center items-center">
+<div class="bg-gray-200 min-h-screen flex flex-col items-center">
   <app-navigation-bar></app-navigation-bar>
   <ng-template #emptyCart>
     <div
@@ -33,7 +33,7 @@
     <main class="md:w-[70vw] w-[80vw] px-4 shadow-lg bg-white rounded-xl">
       <div
         *ngFor="let item of cartItems; let i = index; let last = last"
-        class="flex gap-3 border-b-1 border-gray-400"
+        class="flex gap-3 border-b-2 border-gray-400"
       >
         <div class="bg-white">
           <img
@@ -72,18 +72,20 @@
         </div>
       </div>
       <div
-        class="mt-4 w-full flex font-medium text-gray-700 flex-col rounded-0"
+        class="mt-2 w-full flex font-medium text-gray-700 flex-col rounded-0"
       >
         <span class="flex justify-between">
-          <p class="text-lg pl-4">Total Price</p>
-          <p class="text-right text-xl text-gray-800 pr-3 font-bold">
+          <p class="md:text-lg text-[1rem] pl-4">Total Price</p>
+          <p
+            class="text-right md:text-xl text-[1.1rem] text-gray-800 pr-3 font-bold"
+          >
             ₦{{ getTotalPrice() | number : "1.0-0" }}
           </p>
         </span>
 
         <p
           routerLink="/checkout"
-          class="bg-blue-700 -mx-4 mt-4 cursor-pointer rounded-b-xl text-white py-2 text-center text-lg text"
+          class="bg-blue-700 -mx-4 mt-2 cursor-pointer rounded-b-xl text-white py-3 text-center text-lg text"
         >
           Check Out
         </p>

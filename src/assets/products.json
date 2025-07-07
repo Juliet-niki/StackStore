@@ -86,5 +86,93 @@
     "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
     "rating": 0,
     "brandName": "Versaline"
+  },
+  {
+    "id": 9,
+    "image": "assets/image/sc1.jpg",
+    "slug": "GlamCare",
+    "name": "GlamCare",
+    "price": 10000,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "rating": 0,
+    "brandName": "Nivea"
+  },
+  {
+    "id": 10,
+    "image": "assets/image/sc2.jpg",
+    "slug": "Ravion",
+    "name": "Ravion",
+    "price": 13000,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "rating": 0,
+    "brandName": "Oriflame"
+  },
+  {
+    "id": 11,
+    "image": "assets/image/sc3.jpg",
+    "slug": "Olay",
+    "name": "Olay",
+    "price": 7000,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "rating": 0,
+    "brandName": "Dove"
+  },
+  {
+    "id": 12,
+    "image": "assets/image/sc4.jpg",
+    "slug": "Clear",
+    "name": "Clear",
+    "price": 8600,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "rating": 0,
+    "brandName": "Ordinary"
+  },
+  {
+    "id": 13,
+    "image": "assets/image/sc5.jpg",
+    "slug": "Tru Skin",
+    "name": "Tru Skin",
+    "price": 7000,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "rating": 0,
+    "brandName": "Aura"
+  },
+  {
+    "id": 14,
+    "image": "assets/image/sc6.jpg",
+    "slug": "Facial Brush",
+    "name": "Facial Brush",
+    "price": 13000,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "rating": 0,
+    "brandName": "Versaline"
+  },
+  {
+    "id": 15,
+    "image": "assets/image/sc7.jpg",
+    "slug": "Pilgrim",
+    "name": "Pilgrim",
+    "price": 7000,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "rating": 0,
+    "brandName": "Dove"
+  },
+  {
+    "id": 16,
+    "image": "assets/image/sc8.jpg",
+    "slug": "Haitian Oil",
+    "name": "Haitian Oil",
+    "price": 8600,
+    "description": "Best Sunscreen SPF for unlimited protection.",
+    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "rating": 0,
+    "brandName": "Versaline"
   }
 ]
