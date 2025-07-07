@@ -49,7 +49,6 @@ export class CheckoutComponent implements OnInit {
 
   checkOut() {
     this.orderId = String(Math.round(Math.random() * 1000000)) + 'BOT';
-    console.log(this.orderId);
     this.displayLoadSpinner = true;
 
     setTimeout(() => {
