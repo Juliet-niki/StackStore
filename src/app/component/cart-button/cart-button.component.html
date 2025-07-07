@@ -13,7 +13,7 @@
   </button>
   <span *ngIf="displayIncrementDecrementBtn" class="flex gap-3 items-center">
     <button (click)="remove()" mat-mini-fab color="warn" class="add-btn">
-      <mat-icon>remove</mat-icon>
+      <mat-icon class="add-btn-icon">remove</mat-icon>
     </button>
 
     <p
@@ -23,7 +23,7 @@
       {{ displayNumberOfItemSelected }}
     </p>
     <button (click)="add()" mat-mini-fab color="warn" class="add-btn">
-      <mat-icon>add</mat-icon>
+      <mat-icon class="add-btn-icon">add</mat-icon>
     </button>
   </span>
 </div>

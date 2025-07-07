@@ -63,7 +63,7 @@ export class CartButtonComponent implements OnChanges {
           this.productItem.slug as string,
           1
         );
-        this.productService.setCartItems(this.productItem);
+        this.productService.addToCart(this.productItem);
       }
     }, 900);
   }
@@ -74,7 +74,7 @@ export class CartButtonComponent implements OnChanges {
       this.productItem.slug as string,
       this.displayNumberOfItemSelected
     );
-    this.productService.setCartItems(this.productItem);
+    this.productService.addToCart(this.productItem);
   }
   remove(): void {
     if (this.displayNumberOfItemSelected > 0) {
@@ -83,7 +83,7 @@ export class CartButtonComponent implements OnChanges {
         this.productItem.slug as string,
         this.displayNumberOfItemSelected
       );
-      this.productService.setCartItems(this.productItem);
+      this.productService.removeFromCart(this.productItem.slug!);
     }
 
     if (this.displayNumberOfItemSelected === 0) {

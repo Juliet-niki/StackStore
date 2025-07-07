@@ -8,6 +8,13 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .custom-button {
@@ -17,16 +24,47 @@ body {
   background-color: #103fe9 !important;
 }
 
-.add-btn {
-  border-radius: 9px !important;
-  width: 37px !important;
-  height: 37px !important;
+.checkout-btn {
+  font-weight: 600 !important;
+  font-family: sans-serif !important;
+  border-radius: 9px !important ;
+  color: #fff !important;
   background-color: #103fe9 !important;
 }
 
-/* Medium screens (≥768px) */
+.add-btn {
+  border-radius: 3px !important;
+  width: 20px !important;
+  height: 20px !important;
+  background-color: #103fe9 !important;
+}
+
+.add-btn-icon {
+  font-size: 1.2rem !important;
+  margin-top: 3px !important;
+}
+
+/* Medium screens (md) - 768px and up */
 @media (min-width: 768px) {
   .star {
     font-size: 0.9rem;
+  }
+  .add-btn {
+    border-radius: 7px !important;
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .add-btn-icon {
+    font-size: 1.3rem !important;
+    margin-top: 3px !important;
+  }
+}
+
+/* Large screens (lg) - 1024px and up */
+@media (min-width: 1024px) {
+  .add-btn {
+    width: 37px !important;
+    height: 37px !important;
   }
 }

@@ -12,8 +12,9 @@ export class ProductService {
   private localStorageKey = 'products';
   private cartItemsKey = 'cartItems';
   private cartItemKey = 'cartItem';
+
   private totalCartItemSubject = new BehaviorSubject<number>(
-    this.getCartItems().length
+    this.getCartItems().reduce((sum, item) => sum + (item.quantity || 1), 0)
   );
 
   totalCartItem$ = this.totalCartItemSubject.asObservable();
@@ -51,11 +52,42 @@ export class ProductService {
     return newNumberOfItems;
   }
 
-  setCartItems(cartItem: Product): void {
+  addToCart(cartItem: Product): void {
     const items = this.getCartItems();
-    items.push(cartItem);
+    const existingItem = items.find((item) => item.slug === cartItem.slug);
+
+    if (existingItem) {
+      existingItem.quantity = (existingItem.quantity || 1) + 1;
+    } else {
+      cartItem.quantity = 1;
+      items.push(cartItem);
+    }
+
+    this.setCartItems(items);
+  }
+
+  removeFromCart(slug: string): void {
+    const items = this.getCartItems();
+    const updatedItems = items
+      .map((item) => {
+        if (item.slug === slug) {
+          const updatedQty = (item.quantity || 1) - 1;
+          return updatedQty > 0 ? { ...item, quantity: updatedQty } : null;
+        }
+        return item;
+      })
+      .filter((item) => item !== null) as Product[];
+
+    this.setCartItems(updatedItems);
+  }
+
+  setCartItems(items: Product[]): void {
     localStorage.setItem(this.cartItemsKey, JSON.stringify(items));
-    this.totalCartItemSubject.next(items.length);
+    const totalQuantity = items.reduce(
+      (sum, item) => sum + (item.quantity || 1),
+      0
+    );
+    this.totalCartItemSubject.next(totalQuantity);
   }
 
   getCartItems(): Product[] {
@@ -74,5 +106,14 @@ export class ProductService {
     const cartItem = localStorage.getItem(this.cartItemKey);
     const cart = cartItem ? JSON.parse(cartItem) : {};
     return cart[slug] ?? 0;
+  }
+
+  getTotalCartPrice(): number {
+    const items = this.getCartItems();
+    const totalPrice = items.reduce((sum, item) => {
+      const itemTotal = (item.price || 0) * (item.quantity || 1);
+      return sum + itemTotal;
+    }, 0);
+    return totalPrice;
   }
 }

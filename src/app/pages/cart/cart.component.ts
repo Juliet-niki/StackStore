@@ -4,7 +4,8 @@ import { CartButtonComponent } from '../../component/cart-button/cart-button.com
 import { NgFor, NgIf, Location, CommonModule } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-cart',
@@ -15,6 +16,8 @@ import { Router } from '@angular/router';
     NgFor,
     CartButtonComponent,
     CommonModule,
+    RouterLink,
+    MatButton,
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css',
@@ -29,11 +32,23 @@ export class CartComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.refreshCartItems();
+
+    this.productService.totalCartItem$.subscribe(() => {
+      this.refreshCartItems();
+    });
+  }
+
+  refreshCartItems(): void {
     this.cartItems = this.productService.getCartItems();
   }
 
   getQuantity(slug: string): number {
     return this.productService.getProductQuantity(slug);
+  }
+
+  getTotalPrice(): number {
+    return this.productService.getTotalCartPrice();
   }
 
   goBack() {
