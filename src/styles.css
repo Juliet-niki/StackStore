@@ -49,7 +49,6 @@ body::-webkit-scrollbar {
   margin-top: 3px !important;
 }
 
-/* Medium screens (md) - 768px and up */
 @media (min-width: 768px) {
   .star {
     font-size: 0.9rem;
@@ -70,7 +69,6 @@ body::-webkit-scrollbar {
   }
 }
 
-/* Large screens (lg) - 1024px and up */
 @media (min-width: 1024px) {
   .add-btn {
     width: 37px !important;
