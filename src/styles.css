@@ -24,11 +24,14 @@ body::-webkit-scrollbar {
   background-color: #103fe9 !important;
 }
 
-.checkout-btn {
+.payment-btn {
+  font-size: 1.1rem !important;
   font-weight: 600 !important;
   font-family: sans-serif !important;
   border-radius: 9px !important ;
+  padding: 1.2vh 0 !important;
   color: #fff !important;
+  cursor: pointer;
   background-color: #103fe9 !important;
 }
 

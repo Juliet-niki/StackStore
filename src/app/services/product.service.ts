@@ -16,8 +16,18 @@ export class ProductService {
   private totalCartItemSubject = new BehaviorSubject<number>(
     this.getCartItems().reduce((sum, item) => sum + (item.quantity || 1), 0)
   );
-
   totalCartItem$ = this.totalCartItemSubject.asObservable();
+
+  updateCartCount(count: number): void {
+    this.totalCartItemSubject.next(count);
+  }
+
+  clearLocalStorage(): void {
+    localStorage.removeItem('cartItem');
+    localStorage.removeItem('cartItems');
+    this.updateCartCount(0);
+  }
+
   constructor(private http: HttpClient) {}
 
   loadProducts(): Observable<Product[]> {

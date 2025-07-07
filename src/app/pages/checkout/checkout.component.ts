@@ -1,27 +1,25 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NavigationBarComponent } from '../../component/navigation-bar/navigation-bar.component';
-import { CartButtonComponent } from '../../component/cart-button/cart-button.component';
-import { NgFor, NgIf, Location, CommonModule } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
+import { NgIf, NgFor, CommonModule, Location } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-cart',
+  selector: 'app-checkout',
   standalone: true,
-  imports: [
-    NavigationBarComponent,
-    NgIf,
-    NgFor,
-    CartButtonComponent,
-    CommonModule,
-    RouterLink,
-  ],
-  templateUrl: './cart.component.html',
-  styleUrl: './cart.component.css',
+  imports: [NavigationBarComponent, NgIf, NgFor, CommonModule, RouterLink],
+  templateUrl: './checkout.component.html',
+  styleUrl: './checkout.component.css',
 })
-export class CartComponent implements OnInit {
+export class CheckoutComponent implements OnInit {
   @Input() cartItems: Product[] = [];
+
+  displayLoadSpinner: boolean = false;
+  displayPaymentBtn: boolean = true;
+  succesfulPayment: boolean = false;
+  summaryCart: boolean = true;
+  orderId: string = '';
 
   constructor(
     private productService: ProductService,
@@ -30,14 +28,6 @@ export class CartComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.refreshCartItems();
-
-    this.productService.totalCartItem$.subscribe(() => {
-      this.refreshCartItems();
-    });
-  }
-
-  refreshCartItems(): void {
     this.cartItems = this.productService.getCartItems();
   }
 
@@ -55,5 +45,20 @@ export class CartComponent implements OnInit {
     } else {
       this.router.navigate(['/']);
     }
+  }
+
+  checkOut() {
+    this.orderId = String(Math.round(Math.random() * 1000000)) + 'BOT';
+    console.log(this.orderId);
+    this.displayLoadSpinner = true;
+
+    setTimeout(() => {
+      this.displayPaymentBtn = false;
+      this.succesfulPayment = true;
+      this.summaryCart = false;
+      localStorage.removeItem('cartItems');
+      localStorage.removeItem('cartItem');
+      this.productService.clearLocalStorage();
+    }, 1000);
   }
 }
