@@ -4,7 +4,7 @@
     "image": "assets/image/sc1.jpg",
     "slug": "CeraVe Cleanser",
     "name": "CeraVe Cleanser",
-    "price": 10000,
+    "price": 10030.5,
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "CeraVe"
@@ -24,7 +24,7 @@
     "image": "assets/image/sc3.jpg",
     "slug": "Olay",
     "name": "Olay",
-    "price": 7000,
+    "price": 7099,
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Dove"
@@ -34,7 +34,7 @@
     "image": "assets/image/sc4.jpg",
     "slug": "Clear",
     "name": "Clear",
-    "price": 8600,
+    "price": 8750.8,
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Ordinary"
@@ -54,7 +54,7 @@
     "image": "assets/image/sc6.jpg",
     "slug": "Facial Brush",
     "name": "Facial Brush",
-    "price": 13000,
+    "price": 13099.9,
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Versaline"
@@ -64,7 +64,7 @@
     "image": "assets/image/sc7.jpg",
     "slug": "Pilgrim",
     "name": "Pilgrim",
-    "price": 7000,
+    "price": 7080,
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Dove"
@@ -74,7 +74,7 @@
     "image": "assets/image/sc8.jpg",
     "slug": "Haitian Oil",
     "name": "Haitian Oil",
-    "price": 8600,
+    "price": 9600,
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Versaline"

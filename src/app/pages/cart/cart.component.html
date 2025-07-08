@@ -40,11 +40,15 @@
           *ngFor="let item of cartItems; let i = index; let last = last"
           class="flex gap-3 border-b-2 border-gray-300"
         >
-          <div class="bg-white">
+          <div
+            class="relative bg-white w-16 sm:w-20 md:w-36 lg:w-40 h-20 sm:h-24 md:h-32 lg:h-36"
+          >
             <img
-              [src]="item.image"
+              ngSrc="{{ item.image }}"
+              fill
               [alt]="item.name"
-              class="object-contain w-16 sm:w-20 md:w-36 lg:w-40 h-20 sm:h-24 md:h-32 lg:h-36"
+              loading="lazy"
+              class="object-contain"
             />
           </div>
 

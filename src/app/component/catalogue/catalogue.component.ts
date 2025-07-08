@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
@@ -8,6 +8,7 @@ import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
 import { RouterLink } from '@angular/router';
 import { CartButtonComponent } from '../cart-button/cart-button.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-catalogue',
@@ -21,6 +22,7 @@ import { CartButtonComponent } from '../cart-button/cart-button.component';
     FormsModule,
     RouterLink,
     CartButtonComponent,
+    NgOptimizedImage,
   ],
   templateUrl: './catalogue.component.html',
   styleUrl: './catalogue.component.css',

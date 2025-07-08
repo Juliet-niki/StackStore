@@ -14,12 +14,14 @@
 
     <div class="sm:flex border-blue-600 border-2 rounded-xl bg-blue-200">
       <div
-        class="bg-white rounded-tl-xl sm:rounded-bl-xl rounded-tr-xl mx-auto pt-1"
+        class="relative w-full sm:w-80 md:w-96 lg:w-80 h-64 md:h-72 lg:h-80 bg-white rounded-tl-xl sm:rounded-bl-xl rounded-tr-xl mx-auto pt-1"
       >
         <img
-          [src]="productDetails.image"
+          ngSrc="{{ productDetails.image }}"
+          fill
           [alt]="productDetails.name"
-          class="object-contain rounded-tl-xl sm:rounded-bl-xl rounded-tr-xl w-full sm:w-80 md:w-96 lg:w-80 h-64 md:h-72 lg:h-80"
+          loading="lazy"
+          class="object-contain rounded-tl-xl sm:rounded-bl-xl rounded-tr-xl"
         />
       </div>
 

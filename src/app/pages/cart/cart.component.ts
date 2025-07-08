@@ -1,7 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NavigationBarComponent } from '../../component/navigation-bar/navigation-bar.component';
 import { CartButtonComponent } from '../../component/cart-button/cart-button.component';
-import { NgFor, NgIf, Location, CommonModule } from '@angular/common';
+import {
+  NgFor,
+  NgIf,
+  Location,
+  CommonModule,
+  NgOptimizedImage,
+} from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
 import { Router, RouterLink } from '@angular/router';
@@ -16,6 +22,7 @@ import { Router, RouterLink } from '@angular/router';
     CartButtonComponent,
     CommonModule,
     RouterLink,
+    NgOptimizedImage,
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css',

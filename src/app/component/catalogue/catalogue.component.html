@@ -7,12 +7,14 @@
   >
     <div
       [routerLink]="['/product', product.slug]"
-      class="w-full flex justify-center bg-white rounded-t-2xl cursor-pointer pt-1"
+      class="relative w-full h-36 lg:h-52 flex justify-center bg-white rounded-t-2xl cursor-pointer pt-1"
     >
       <img
-        [src]="product?.image"
-        alt="{{ product.name }}"
-        class="object-cover rounded-t-2xl h-36 lg:h-52"
+        ngSrc="{{ product.image }}"
+        fill
+        [alt]="product.name"
+        class="object-cover rounded-t-2xl"
+        loading="lazy"
       />
     </div>
 

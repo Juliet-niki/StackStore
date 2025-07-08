@@ -1,10 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { NgFor, NgIf, Location, ViewportScroller } from '@angular/common';
+import {
+  NgFor,
+  NgIf,
+  Location,
+  ViewportScroller,
+  NgOptimizedImage,
+} from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
-import { ActivatedRoute, RouterLink, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NavigationBarComponent } from '../../component/navigation-bar/navigation-bar.component';
 import { CatalogueComponent } from '../../component/catalogue/catalogue.component';
 import { CartButtonComponent } from '../../component/cart-button/cart-button.component';
@@ -20,6 +26,7 @@ import { CartButtonComponent } from '../../component/cart-button/cart-button.com
     NavigationBarComponent,
     CatalogueComponent,
     CartButtonComponent,
+    NgOptimizedImage,
   ],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css',
