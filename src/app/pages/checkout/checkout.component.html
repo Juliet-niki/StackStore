@@ -1,75 +1,81 @@
-<div class="bg-gray-200 min-h-screen pb-3 flex flex-col items-center">
-  <app-navigation-bar></app-navigation-bar>
-
+<app-navigation-bar></app-navigation-bar>
+<div
+  class="bg-gray-200 h-screen flex flex-col items-center pt-20 md:pt-24 lg:pt-28"
+>
   <div
     *ngIf="summaryCart && cartItems.length > 0; else showEmptyAndSuccess"
-    class="lg:pt-28 md:pt-24 pt-20"
+    class="font-sans flex flex-col"
   >
     <button
       (click)="goBack()"
-      class="text-black text-[1rem] font-medium py-1 mr-auto mb-2 w-20 bg-gray-200 hover:text-gray-700 cursor-pointer rounded-lg"
+      class="text-black text-[1rem] font-medium py-1 mr-auto mb-1 w-20 bg-gray-200 hover:text-gray-700 cursor-pointer rounded-lg"
     >
       <i class="fas fa-angle-left"></i>
       Back
     </button>
+
     <div
       *ngIf="cartItems"
-      class="h-fit md:w-[35vw] w-[80vw] rounded-xl shadow-lg bg-white flex flex-col py-4 px-5"
+      class="w-[80vw] sm:w-[70vw] lg:w-[75vw] h-[calc(100vh-7.5rem)] sm:h-[calc(100vh-7.5rem)] md:h-[calc(100vh-8.5rem)] lg:h-[calc(100vh-9.3rem)] overflow-hidden rounded-t-xl shadow-lg bg-white flex flex-col pt-4"
     >
       <h3
-        class="font-medium text-center text-gray-700 text-[1rem] border-b-2 border-gray-400"
+        class="font-medium mx-4 text-center text-gray-700 text-[1rem] border-b-2 border-gray-400"
       >
         CART SUMMARY
       </h3>
-      <div
-        class="justify-between overflow-x-auto item-end pt-3 mb-1 border-b-2 border-gray-400"
-      >
-        <table class="w-full text-gray-700 text-[1rem]">
-          <tr>
-            <th class="text-left pb-1">Items</th>
-            <th class="pb-1">Qty</th>
-            <th class="text-right pb-1">Price</th>
-          </tr>
-          <tr *ngFor="let item of cartItems">
-            <td class="pb-1">
-              {{ item.name }}
-            </td>
-            <td class="text-center pb-1" *ngIf="item.slug">
-              {{ getQuantity(item.slug) }}
-            </td>
-            <td class="text-right pb-1">₦{{ item.price }}</td>
-          </tr>
+
+      <div class="overflow-auto max-h-[350px] hide-scrollbar mx-4 pr-1">
+        <table class="w-full text-gray-700 text-[1rem] border-collapse">
+          <thead class="sticky top-0 bg-white z-10">
+            <tr>
+              <th class="text-left pb-1">Items</th>
+              <th class="pb-1">Qty</th>
+              <th class="text-right pb-1">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cartItems">
+              <td class="pb-1">{{ item.name }}</td>
+              <td class="text-center pb-1" *ngIf="item.slug">
+                {{ getQuantity(item.slug) }}
+              </td>
+              <td class="text-right pb-1">₦{{ item.price }}</td>
+            </tr>
+          </tbody>
         </table>
       </div>
-      <div class="flex justify-between py-1 border-b-2 mb-3 border-gray-400">
-        <p class="text-gray-600 text-[1rem]">Total Price</p>
-        <p class="text-gray-700 font-semibold sm:text-[1.2rem] text-[1.02rem]">
-          ₦{{ getTotalPrice() | number : "1.0-0" }}
-        </p>
-      </div>
 
-      <button
-        *ngIf="displayPaymentBtn"
-        (click)="checkOut()"
-        mat-flat-button
-        color="accent"
-        class="payment-btn"
-      >
-        <p *ngIf="!displayLoadSpinner">
-          Make payment ( ₦{{ getTotalPrice() | number : "1.0-0" }})
-        </p>
-        <i
-          *ngIf="displayLoadSpinner"
-          class="fas fa-circle-notch fa-spin text-xl text-white"
-        ></i>
-      </button>
+      <div class="mt-auto shadow-inner shadow-gray-200">
+        <div class="flex justify-between mt-4 pb-2 px-4 border-gray-400">
+          <p class="text-gray-600 font-medium text-[1rem]">Total Price</p>
+          <p
+            class="text-[1.02rem] sm:text-[1.2rem] text-gray-700 font-semibold"
+          >
+            ₦{{ getTotalPrice() | number : "1.0-0" }}
+          </p>
+        </div>
+
+        <button
+          *ngIf="displayPaymentBtn"
+          (click)="checkOut()"
+          mat-flat-button
+          color="accent"
+          class="payment-btn w-full"
+        >
+          <p *ngIf="!displayLoadSpinner">
+            Make payment ( ₦{{ getTotalPrice() | number : "1.0-0" }})
+          </p>
+          <i
+            *ngIf="displayLoadSpinner"
+            class="fas fa-circle-notch fa-spin text-xl text-white"
+          ></i>
+        </button>
+      </div>
     </div>
   </div>
 
   <ng-template #showEmptyAndSuccess>
-    <div
-      class="flex flex-col items-center px-4 py-10 w-full min-h-[calc(100vh-5rem)] lg:pt-28 md:pt-24 pt-20"
-    >
+    <div class="flex flex-col items-center px-4 py-10 w-full h-full">
       <div *ngIf="succesfulPayment" class="text-gray-700">
         <p class="text-lg">
           Payment Successful
@@ -82,12 +88,12 @@
 
       <div
         *ngIf="!summaryCart || cartItems.length === 0"
-        class="flex flex-col items-center justify-center gap-5 mt-auto"
+        class="flex flex-col items-center justify-center gap-3 mt-auto"
       >
         <p class="font-medium text-center text-lg text-gray-800">
           Your cart
           <i
-            class="fas fa-cart-plus md:text-lg sm-text[1rem] text-[0.8rem]"
+            class="fas fa-cart-plus text-[0.8rem] sm:text-[1rem] md:text-lg"
           ></i>
           is empty
         </p>
