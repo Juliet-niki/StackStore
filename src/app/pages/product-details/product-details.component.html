@@ -2,7 +2,7 @@
 
 <div class="bg-white font-sans" *ngIf="productDetails">
   <main
-    class="flex flex-col gap-1 mt-20 md:mt-24 lg:mt-28 pb-20 px-6 sm:px-16 md:px-24 lg:px-36"
+    class="flex flex-col gap-1 mt-20 md:mt-24 lg:mt-28 pb-20 px-10 sm:px-12 md:px-8 lg:px-24"
   >
     <button
       (click)="goBack()"
@@ -14,18 +14,18 @@
 
     <div class="sm:flex border-blue-600 border-2 rounded-xl bg-blue-200">
       <div
-        class="relative w-full sm:w-80 md:w-96 lg:w-80 h-64 md:h-72 lg:h-80 bg-white rounded-tl-xl sm:rounded-bl-xl rounded-tr-xl mx-auto pt-1"
+        class="relative w-full lg:w-[30%] h-64 sm:h-72 md:h-80 lg:h-80 bg-white rounded-tl-xl sm:rounded-bl-xl rounded-tr-xl sm:rounded-tr-none mx-auto pt-1"
       >
         <img
           ngSrc="{{ productDetails.image }}"
           fill
           [alt]="productDetails.name"
           loading="lazy"
-          class="object-contain rounded-tl-xl sm:rounded-bl-xl rounded-tr-xl"
+          class="object-contain rounded-tl-xl sm:rounded-bl-xl sm:rounded-tr-none rounded-tr-xl py-2 px-3"
         />
       </div>
 
-      <div class="text-gray-700 flex flex-col px-4 py-4">
+      <div class="text-gray-700 flex flex-col px-4 py-4 lg:w-[70%]">
         <h3 class="font-bold text-[1.2rem] md:text-[1.5rem] text-gray-800">
           {{ productDetails.name }}
         </h3>

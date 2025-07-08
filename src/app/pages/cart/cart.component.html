@@ -4,7 +4,7 @@
 >
   <ng-template #emptyCart>
     <div
-      class="flex flex-col items-center justify-center gap-5 min-h-[calc(100vh-5rem)]"
+      class="flex flex-col items-center justify-center gap-5 min-h-[calc(100dvh-5rem)]"
     >
       <p class="font-medium text-center text-lg text-gray-800">
         Your cart
@@ -33,9 +33,9 @@
     </button>
 
     <main
-      class="w-[80vw] md:w-[70vw] pt-4 flex flex-col overflow-hidden h-[calc(100vh-7.5rem)] sm:h-[calc(100vh-7.5rem)] md:h-[calc(100vh-8.5rem)] lg:h-[calc(100vh-9.3rem)] shadow-md bg-white rounded-t-xl"
+      class="w-[80vw] md:w-[70vw] pt-4 flex flex-col overflow-hidden h-[calc(100dvh-7.5rem)] sm:h-[calc(100dvh-7.5rem)] md:h-[calc(100dvh-8.5rem)] lg:h-[calc(100dvh-9.3rem)] shadow-md bg-white rounded-t-xl"
     >
-      <div class="mx-4 h-[calc(100vh-7.5rem)] overflow-y-auto hide-scrollbar">
+      <div class="mx-4 h-[calc(100dvh-7.5rem)] overflow-y-auto hide-scrollbar">
         <div
           *ngFor="let item of cartItems; let i = index; let last = last"
           class="flex gap-3 border-b-2 border-gray-300"
@@ -48,7 +48,7 @@
               fill
               [alt]="item.name"
               loading="lazy"
-              class="object-contain"
+              class="object-contain py-2"
             />
           </div>
 

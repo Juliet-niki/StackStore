@@ -16,7 +16,7 @@
 
     <div
       *ngIf="cartItems"
-      class="w-[80vw] sm:w-[70vw] lg:w-[75vw] h-[calc(100vh-7.5rem)] sm:h-[calc(100vh-7.5rem)] md:h-[calc(100vh-8.5rem)] lg:h-[calc(100vh-9.3rem)] overflow-hidden rounded-t-xl shadow-lg bg-white flex flex-col pt-4"
+      class="w-[80vw] sm:w-[70vw] lg:w-[75vw] h-[calc(100dvh-7.5rem)] sm:h-[calc(100dvh-7.5rem)] md:h-[calc(100dvh-8.5rem)] lg:h-[calc(100dvh-9.3rem)] overflow-hidden rounded-t-xl shadow-lg bg-white flex flex-col pt-4"
     >
       <h3
         class="font-medium mx-4 text-center text-gray-700 text-[1rem] border-b-2 border-gray-400"
@@ -24,7 +24,7 @@
         CART SUMMARY
       </h3>
 
-      <div class="overflow-auto max-h-[350px] hide-scrollbar mx-4 pr-1">
+      <div class="overflow-auto max-h-full hide-scrollbar mx-4 pr-1">
         <table class="w-full text-gray-700 text-[1rem] border-collapse">
           <thead class="sticky top-0 bg-white z-10">
             <tr>
