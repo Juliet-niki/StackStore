@@ -19,31 +19,39 @@ body::-webkit-scrollbar {
   scrollbar-width: none;
 }
 
+.custom-button,
+.payment-btn,
+.add-btn {
+  background-color: #103fe9 !important;
+  font-weight: 600 !important;
+}
+
+.custom-button:hover,
+.payment-btn:hover,
+.add-btn:hover {
+  background-color: #1948f0 !important;
+}
+
 .custom-button {
   font-size: 0.6rem !important;
-  font-weight: 600 !important;
   border-radius: 9px !important ;
   height: 0px !important;
   padding: 2vh 3vw !important;
-  background-color: #103fe9 !important;
 }
 
 .payment-btn {
   font-size: 1rem !important;
-  font-weight: 600 !important;
   font-family: sans-serif !important;
-  border-radius: 9px !important ;
-  padding: 1.2vh 0 !important;
+  border-radius: 0px !important ;
+  padding: 1.3vh 0 !important;
   color: #fff !important;
   cursor: pointer;
-  background-color: #103fe9 !important;
 }
 
 .add-btn {
   border-radius: 3px !important;
   width: 20px !important;
   height: 20px !important;
-  background-color: #103fe9 !important;
 }
 
 .add-btn-icon {
@@ -54,6 +62,14 @@ body::-webkit-scrollbar {
 .star {
   color: goldenrod !important;
   margin: 0.6vw 0 0 0 !important;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 @media (min-width: 640px) {
