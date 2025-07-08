@@ -1,50 +1,55 @@
-<main class="font-sans flex gap-8 pb-20 px-10 flex-wrap justify-center">
+<main
+  class="font-sans flex gap-4 sm:gap-6 md:gap-8 pb-20 lg:px-10 px-0 flex-wrap justify-center"
+>
   <div
     *ngFor="let product of products"
-    class="shadow-lg shadow-gray-400 border-2 border-blue-800 rounded-2xl"
+    class="shadow-lg shadow-gray-400 border-2 w-[42vw] sm:w-[40vw] md:w-[28vw] lg:w-[20vw] h-fit border-blue-800 rounded-2xl"
   >
     <div
       [routerLink]="['/product', product.slug]"
-      class="w-full flex justify-center bg-white rounded-t-2xl cursor-pointer"
+      class="w-full flex justify-center bg-white rounded-t-2xl cursor-pointer pt-1"
     >
       <img
         [src]="product?.image"
         alt="{{ product.name }}"
-        class="object-cover w-48 h-52"
+        class="object-cover rounded-t-2xl h-36 lg:h-52"
       />
     </div>
 
     <div
       class="text-gray-700 flex flex-col px-2 bg-blue-200 rounded-b-2xl pb-2"
     >
-      <h3 class="font-bold md:text-[1.2rem] text-[1.1rem] text-gray-800">
+      <h3
+        class="font-bold md:text-[1.2rem] text-[0.9rem] sm:text-[1rem] text-gray-800"
+      >
         {{ product?.name }}
       </h3>
-      <p class="font-medium md:text-[1rem] text-[0.9rem]">
+      <p class="font-medium md:text-[1rem] text-[0.8rem] sm:text-[0.9rem]">
         ₦{{ product?.price }}
       </p>
-      <p class="md:text-[1rem] text-[0.9rem]">
+      <p class="sm:text-[0.9rem] text-[0.7rem] mt-1 line-clamp-1">
         {{ product?.description }}
       </p>
 
-      <div class="rating flex">
-        <p class="font-medium md:text-[1rem] text-[0.9rem] mr-1">Rating:</p>
+      <div class="rating flex mt-2">
+        <p
+          class="font-semibold md:text-[1rem] text-[0.7rem] sm:text-[0.9rem] mr-1"
+        >
+          Rating:
+        </p>
         <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
           <mat-icon
             *ngIf="product.rating !== undefined"
-            color="warn"
+            color=""
             (click)="updateRating(product, i + 1)"
-            class="cursor-pointer"
+            class="cursor-pointer text-[0.8rem] star"
           >
             {{ i < product.rating ? "star" : "star_border" }}
           </mat-icon>
         </ng-container>
       </div>
 
-      <app-cart-button
-        [productItem]="product"
-        class="ml-auto"
-      ></app-cart-button>
+      <app-cart-button [productItem]="product"></app-cart-button>
     </div>
   </div>
 </main>

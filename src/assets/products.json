@@ -2,13 +2,12 @@
   {
     "id": 1,
     "image": "assets/image/sc1.jpg",
-    "slug": "GlamCare",
-    "name": "GlamCare",
+    "slug": "CeraVe Cleanser",
+    "name": "CeraVe Cleanser",
     "price": 10000,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
-    "brandName": "Nivea"
+    "brandName": "CeraVe"
   },
   {
     "id": 2,
@@ -16,8 +15,7 @@
     "slug": "Ravion",
     "name": "Ravion",
     "price": 13000,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Oriflame"
   },
@@ -27,8 +25,7 @@
     "slug": "Olay",
     "name": "Olay",
     "price": 7000,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Dove"
   },
@@ -38,8 +35,7 @@
     "slug": "Clear",
     "name": "Clear",
     "price": 8600,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Ordinary"
   },
@@ -49,8 +45,7 @@
     "slug": "Tru Skin",
     "name": "Tru Skin",
     "price": 7000,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Aura"
   },
@@ -60,8 +55,7 @@
     "slug": "Facial Brush",
     "name": "Facial Brush",
     "price": 13000,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Versaline"
   },
@@ -71,8 +65,7 @@
     "slug": "Pilgrim",
     "name": "Pilgrim",
     "price": 7000,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Dove"
   },
@@ -82,96 +75,87 @@
     "slug": "Haitian Oil",
     "name": "Haitian Oil",
     "price": 8600,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Versaline"
   },
   {
     "id": 9,
-    "image": "assets/image/sc1.jpg",
-    "slug": "GlamCare",
-    "name": "GlamCare",
+    "image": "assets/image/sc9.jpg",
+    "slug": "Cicapair",
+    "name": "Cicapair",
     "price": 10000,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
-    "brandName": "Nivea"
+    "brandName": "Dr.Jart+"
   },
   {
     "id": 10,
-    "image": "assets/image/sc2.jpg",
-    "slug": "Ravion",
-    "name": "Ravion",
+    "image": "assets/image/sc10.jpg",
+    "slug": "Hydro Boost",
+    "name": "Hydro Boost",
     "price": 13000,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
-    "brandName": "Oriflame"
+    "brandName": "Nuetrogena"
   },
   {
     "id": 11,
-    "image": "assets/image/sc3.jpg",
-    "slug": "Olay",
-    "name": "Olay",
+    "image": "assets/image/sc11.jpg",
+    "slug": "GlamCare",
+    "name": "GlamCare",
     "price": 7000,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Dove"
   },
   {
     "id": 12,
-    "image": "assets/image/sc4.jpg",
-    "slug": "Clear",
-    "name": "Clear",
+    "image": "assets/image/sc12.jpg",
+    "slug": "Face Mask",
+    "name": "Face Mask",
     "price": 8600,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
-    "brandName": "Ordinary"
+    "brandName": "LengBox"
   },
   {
     "id": 13,
-    "image": "assets/image/sc5.jpg",
-    "slug": "Tru Skin",
-    "name": "Tru Skin",
+    "image": "assets/image/sc13.jpg",
+    "slug": "Deep Cleanser",
+    "name": "Deep Cleanser",
     "price": 7000,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
-    "brandName": "Aura"
+    "brandName": "Nuetrogena"
   },
   {
     "id": 14,
-    "image": "assets/image/sc6.jpg",
-    "slug": "Facial Brush",
-    "name": "Facial Brush",
+    "image": "assets/image/sc14.jpg",
+    "slug": "Wash Gel",
+    "name": "Wash Gel",
     "price": 13000,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
-    "brandName": "Versaline"
+    "brandName": "Nivea"
   },
   {
     "id": 15,
-    "image": "assets/image/sc7.jpg",
-    "slug": "Pilgrim",
-    "name": "Pilgrim",
+    "image": "assets/image/sc15.jpg",
+    "slug": "Vaseline Tonner",
+    "name": "Vaseline Tonner",
     "price": 7000,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
-    "brandName": "Dove"
+    "brandName": "Vaseline"
   },
   {
     "id": 16,
-    "image": "assets/image/sc8.jpg",
-    "slug": "Haitian Oil",
-    "name": "Haitian Oil",
+    "image": "assets/image/sc16.jpg",
+    "slug": "lip Balm",
+    "name": "lip Balm",
     "price": 8600,
-    "description": "Best Sunscreen SPF for unlimited protection.",
-    "fullDescription": "Best Sunscreen SPF for unlimited protection Lorem ipsum dolor sit amet consectetur adipisicing elit Quaerat.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
     "brandName": "Versaline"
   }

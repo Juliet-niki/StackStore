@@ -20,9 +20,11 @@ body::-webkit-scrollbar {
 }
 
 .custom-button {
-  font-size: 0.7rem !important;
+  font-size: 0.6rem !important;
   font-weight: 600 !important;
   border-radius: 9px !important ;
+  height: 0px !important;
+  padding: 2vh 3vw !important;
   background-color: #103fe9 !important;
 }
 
@@ -49,6 +51,18 @@ body::-webkit-scrollbar {
   margin-top: 3px !important;
 }
 
+.star {
+  color: goldenrod !important;
+  margin: 0.6vw 0 0 0 !important;
+}
+
+@media (min-width: 640px) {
+  .custom-button {
+    font-size: 0.7rem !important;
+    padding: 2.5vh 2vw !important;
+  }
+}
+
 @media (min-width: 768px) {
   .star {
     font-size: 0.9rem;
@@ -70,6 +84,11 @@ body::-webkit-scrollbar {
 }
 
 @media (min-width: 1024px) {
+  .custom-button {
+    font-size: 0.8rem !important;
+    padding: 2.5vh 1vw !important;
+  }
+
   .add-btn {
     width: 37px !important;
     height: 37px !important;

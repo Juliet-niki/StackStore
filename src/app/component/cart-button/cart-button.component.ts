@@ -37,7 +37,6 @@ export class CartButtonComponent implements OnChanges {
     name: '',
     price: 0,
     description: '',
-    fullDescription: '',
     image: '',
     brandName: '',
     rating: 0,

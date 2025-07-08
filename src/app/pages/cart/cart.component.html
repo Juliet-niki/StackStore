@@ -20,7 +20,7 @@
 
   <div
     *ngIf="cartItems.length > 0; else emptyCart"
-    class="pb-30 font-sans flex flex-col lg:pt-28 md:pt-24 pt-20 bg-red"
+    class="pb-30 font-sans flex flex-col lg:pt-28 md:pt-24 pt-20"
   >
     <button
       (click)="goBack()"
@@ -30,7 +30,9 @@
       Back
     </button>
 
-    <main class="md:w-[70vw] w-[80vw] px-4 mb-20 shadow-lg bg-white rounded-xl">
+    <main
+      class="md:w-[70vw] w-[80vw] flex flex-col h-96 px-4 mb-20 shadow-lg bg-white rounded-xl"
+    >
       <div
         *ngFor="let item of cartItems; let i = index; let last = last"
         class="flex gap-3 border-b-2 border-gray-400"
@@ -71,7 +73,9 @@
           </div>
         </div>
       </div>
-      <div class="w-full flex font-medium text-gray-700 flex-col rounded-0">
+      <div
+        class="w-full mt-auto flex font-medium text-gray-700 flex-col rounded-0"
+      >
         <span class="flex justify-between border-b-2 border-gray-400 py-2">
           <p class="md:text-lg text-[1rem] pl-4">Total Price</p>
           <p
