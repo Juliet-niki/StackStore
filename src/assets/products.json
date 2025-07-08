@@ -12,12 +12,12 @@
   {
     "id": 2,
     "image": "assets/image/sc2.jpg",
-    "slug": "Ravion",
-    "name": "Ravion",
+    "slug": "Wash Gel",
+    "name": "Wash Gel",
     "price": 13000,
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
-    "brandName": "Oriflame"
+    "brandName": "Nivea"
   },
   {
     "id": 3,
@@ -132,12 +132,12 @@
   {
     "id": 14,
     "image": "assets/image/sc14.jpg",
-    "slug": "Wash Gel",
-    "name": "Wash Gel",
+    "slug": "Ravion",
+    "name": "Ravion",
     "price": 13000,
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,
-    "brandName": "Nivea"
+    "brandName": "Oriflame"
   },
   {
     "id": 15,
@@ -154,6 +154,56 @@
     "image": "assets/image/sc16.jpg",
     "slug": "lip Balm",
     "name": "lip Balm",
+    "price": 8600,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
+    "rating": 0,
+    "brandName": "Versaline"
+  },
+  {
+    "id": 17,
+    "image": "assets/image/sc17.jpg",
+    "slug": "Nivea Toner",
+    "name": "Nivea Toner",
+    "price": 8600,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
+    "rating": 0,
+    "brandName": "Nivea"
+  },
+  {
+    "id": 18,
+    "image": "assets/image/sc18.jpg",
+    "slug": "Nivea Body Spray",
+    "name": "Nivea Body Spray",
+    "price": 8600,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
+    "rating": 0,
+    "brandName": "Nivea"
+  },
+  {
+    "id": 19,
+    "image": "assets/image/sc19.jpg",
+    "slug": "Body Lotion",
+    "name": "Body Lotion",
+    "price": 8600,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
+    "rating": 0,
+    "brandName": "Aura"
+  },
+  {
+    "id": 20,
+    "image": "assets/image/sc20.jpg",
+    "slug": "Coca Glow",
+    "name": "Coca Glow",
+    "price": 8600,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
+    "rating": 0,
+    "brandName": "Versaline"
+  },
+  {
+    "id": 21,
+    "image": "assets/image/sc21.jpg",
+    "slug": "Vaseline Body Lotion",
+    "name": "Vaseline Body Lotion",
     "price": 8600,
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, similique expedita? Laboriosam provident quod odio nisi sed, minus accusamus expedita enim alias quo ab quidem blanditiis cumque labore quam inventore!",
     "rating": 0,

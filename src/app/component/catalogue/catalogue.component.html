@@ -1,5 +1,5 @@
 <main
-  class="font-sans flex gap-4 sm:gap-6 md:gap-8 pb-20 lg:px-10 px-0 flex-wrap justify-center"
+  class="font-sans flex gap-4 px-0 sm:gap-6 md:gap-8 lg:px-10 pb-20 flex-wrap justify-center"
 >
   <div
     *ngFor="let product of products"
@@ -17,23 +17,23 @@
     </div>
 
     <div
-      class="text-gray-700 flex flex-col px-2 bg-blue-200 rounded-b-2xl pb-2"
+      class="text-gray-700 flex flex-col px-2 bg-blue-200 rounded-b-2xl py-2"
     >
       <h3
-        class="font-bold md:text-[1.2rem] text-[0.9rem] sm:text-[1rem] text-gray-800"
+        class="font-bold text-[0.9rem] sm:text-[1rem] md:text-[1.2rem] line-clamp-1 text-gray-800"
       >
         {{ product?.name }}
       </h3>
-      <p class="font-medium md:text-[1rem] text-[0.8rem] sm:text-[0.9rem]">
+      <p class="font-medium text-[0.8rem] sm:text-[0.9rem] md:text-[1rem]">
         ₦{{ product?.price }}
       </p>
-      <p class="sm:text-[0.9rem] text-[0.7rem] mt-1 line-clamp-1">
+      <p class="text-[0.7rem] sm:text-[0.9rem] mt-1 line-clamp-1">
         {{ product?.description }}
       </p>
 
       <div class="rating flex mt-2">
         <p
-          class="font-semibold md:text-[1rem] text-[0.7rem] sm:text-[0.9rem] mr-1"
+          class="font-semibold text-[0.7rem] sm:text-[0.9rem] md:text-[1rem] mr-1"
         >
           Rating:
         </p>
