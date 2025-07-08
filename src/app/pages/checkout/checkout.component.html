@@ -1,26 +1,9 @@
 <div class="bg-gray-200 min-h-screen pb-3 flex flex-col items-center">
   <app-navigation-bar></app-navigation-bar>
-  <ng-template #emptyCart>
-    <div
-      class="flex flex-col items-center justify-center gap-5 min-h-[calc(100vh-5rem)]"
-    >
-      <p class="font-medium text-center text-lg text-gray-800">
-        Your cart
-        <i class="fas fa-cart-plus md:text-lg sm-text[1rem] text-[0.8rem]"></i>
-        is empty
-      </p>
-      <button
-        routerLink="/"
-        class="bg-blue-700 hover:bg-blue-800 cursor-pointer text-white border-0 py-2 px-4 rounded"
-      >
-        Start Shopping
-      </button>
-    </div>
-  </ng-template>
 
   <div
-    *ngIf="summaryCart && cartItems.length > 0; else emptyCart"
-    class="lg:pt-28 md:pt-24 pt-20 bg-red"
+    *ngIf="summaryCart && cartItems.length > 0; else showEmptyAndSuccess"
+    class="lg:pt-28 md:pt-24 pt-20"
   >
     <button
       (click)="goBack()"
@@ -38,8 +21,8 @@
       >
         CART SUMMARY
       </h3>
-      <span
-        class="justify-between item-end pt-3 mb-1 border-b-2 border-gray-400"
+      <div
+        class="justify-between overflow-x-auto item-end pt-3 mb-1 border-b-2 border-gray-400"
       >
         <table class="w-full text-gray-700 text-[1rem]">
           <tr>
@@ -57,8 +40,8 @@
             <td class="text-right pb-1">₦{{ item.price }}</td>
           </tr>
         </table>
-      </span>
-      <div class="flex justify-between py-2">
+      </div>
+      <div class="flex justify-between py-1 border-b-2 mb-3 border-gray-400">
         <p class="text-gray-600 text-[1rem]">Total Price</p>
         <p class="text-gray-700 font-semibold sm:text-[1.2rem] text-[1.02rem]">
           ₦{{ getTotalPrice() | number : "1.0-0" }}
@@ -83,12 +66,38 @@
     </div>
   </div>
 
-  <div *ngIf="succesfulPayment" class="text-gray-700">
-    <p class="text-lg">
-      Payment Succesful <i class="fa fa-check-circle ml-1 text-green-600"></i>
-    </p>
-    <p class="text-xl">
-      Order ID: <strong>{{ orderId }}</strong>
-    </p>
-  </div>
+  <ng-template #showEmptyAndSuccess>
+    <div
+      class="flex flex-col items-center px-4 py-10 w-full min-h-[calc(100vh-5rem)] lg:pt-28 md:pt-24 pt-20"
+    >
+      <div *ngIf="succesfulPayment" class="text-gray-700">
+        <p class="text-lg">
+          Payment Successful
+          <i class="fa fa-check-circle ml-1 text-green-600"></i>
+        </p>
+        <p class="text-xl">
+          Order ID: <strong>{{ orderId }}</strong>
+        </p>
+      </div>
+
+      <div
+        *ngIf="!summaryCart || cartItems.length === 0"
+        class="flex flex-col items-center justify-center gap-5 mt-auto"
+      >
+        <p class="font-medium text-center text-lg text-gray-800">
+          Your cart
+          <i
+            class="fas fa-cart-plus md:text-lg sm-text[1rem] text-[0.8rem]"
+          ></i>
+          is empty
+        </p>
+        <button
+          routerLink="/"
+          class="bg-blue-700 hover:bg-blue-800 cursor-pointer text-white border-0 py-2 px-4 rounded"
+        >
+          Start Shopping
+        </button>
+      </div>
+    </div>
+  </ng-template>
 </div>
