@@ -8,19 +8,23 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    title: 'Home',
   },
 
   {
     path: 'product/:slug',
     component: ProductDetailsComponent,
+    title: 'Product Details',
   },
 
   {
     path: 'cart',
     component: CartComponent,
+    title: 'Cart',
   },
   {
     path: 'checkout',
     component: CheckoutComponent,
+    title: 'Checkout ',
   },
 ];
